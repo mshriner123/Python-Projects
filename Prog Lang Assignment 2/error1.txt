@@ -1,0 +1,1 @@
+A23 begin abc := 123 end

@@ -1,0 +1,1 @@
+program Mike begin while abc read ( <variable> { , <variable> } ) {; <stmt>} end

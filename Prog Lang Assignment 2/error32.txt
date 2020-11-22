@@ -1,0 +1,1 @@
+program A procedure do <compound stmt> <compound stmt>

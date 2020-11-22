@@ -1,0 +1,104 @@
+Michael Shriner 
+Test text file descriptions for parser.py
+
+==========================================
+
+Tests for Valid Expressions:
+
+validExpression1.txt
+a basic and valid sentential sentence that I used to test my parser before using a more complex sentential sentence. 
+
+validExpression2.txt 
+a complex and valid sentential sentence used to test my parser. 
+
+validExpression3.txt
+a complex and valid sentential sentence used to test my parser. 
+
+
+===========================================
+
+Tests for Invalid Expressions (tests for errors):
+
+Note: I determined which errors to test (mostly) by looking at the functions in parser.py. The errors are ordered by production (mostly) as you will see below. Some of the errors that I tested were not possible errors, and I marked them as such below. The error test text files correspond with the error numbers below. Not all of the errors below have text files because not all are possible errors. For example, error 1 corresponds with error1.txt but error3.txt does not exist because error 3 is not possible. 
+Special case: Error 32 is in text files error32.txt, error32.1.txt, error32.2.txt, error32.3.txt
+
+Production: <program> ::= program <progname> { <procedure_definition> } <compound stmt>
+Error 1: sentential sentence doesn't start with program 
+Error 2: not progname after program 
+
+Production: #<procedure definition> ::= procedure <procedure name> <compound stmt>
+Error 3: doesn't start with procedure -- not a possible error -- 
+
+Production: #<stmt> ::= <simple stmt> | <structured stmt>
+Error 4: didn't start with VARIABLE, read, write, begin, if, or while
+
+Production: #<compound stmt> ::= begin <stmt> {; <stmt>} end
+Error 5: doesn't start with begin 
+Error 6: doesn't end with end 
+
+Production: #<simple stmt> ::= <assignment stmt> | <read stmt> | <write stmt> | <procedure call>
+Error 7: doesn't start with read, write, VARIABLE, or call -- not possible -- 
+
+Production: #<procedure name> ::= <variable>
+Error 8: doesn't start with variable 
+
+Production: #<procedure call> ::= call <procedure name> ( )
+Error 9: doesn't start with call -- not possible --
+Error 10: missing left paren after <procedure name>
+Error 11: missing right paren after left paren
+
+Production: #<assignment stmt> ::= <variable> := <expression>
+Error 12: doesn't start with variable -- not possible -- 
+Error 13: := isn't after variable 
+
+Production: # <read stmt> ::= read ( <variable> { , <variable> } )
+Error 14: doesn't start with read -- not possible -- 
+Error 15: ( doesn't follow read 
+Error 16: variable doesn't follow (
+Error 17: a , but no variable after it 
+Error 18: doesn't end with )
+
+Production: #<write stmt> ::= write ( <expression> { , <expression> } )
+Error 19: doesn't start with write -- not possible -- 
+Error 20: ( doesn't follow write
+Error 21: ) isn't at the end
+
+Production: #<structured stmt> ::= <compound stmt> | <if stmt> | <while stmt>
+Error 22: doesn't start with begin, if, or while -- error is printed before you reach this production -- 
+
+Production: #<sign> ::= + | -
+Error 23: doesn't start with + or -  -- not possible --
+
+Production: #<adding_operator> ::= + | -
+Error 24: doesn't start with + or -  -- not possible -- 
+
+Production: #<factor> ::= <variable> | <constant> | ( <expression> )
+Error 25: doesn't start with a variable, a constant, or a (
+Error 26: starts with left paren but doesn't end with right paren 
+
+Production: #<while stmt> ::= while <expression> do <stmt>
+Error 27: doesn't start with while -- not possible -- 
+Error 28: missing do after the expression
+
+Production: #<if stmt> ::= if <expression> then <stmt> | if <expression> then <stmt> else <stmt>
+Error 29: missing if at the start -- not possible -- 
+Error 30: missing then after the expression
+
+No Production, Possible Error in Main():
+error 31: extra content after the end of the sentential sentence that makes it invalid
+
+Misc. Error:
+Error 32: variables cannot be any of the reserved words (I checked a few reserved words and double checked my logic in lex())
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1 @@
+program Daniel begin if abc read ( <variable> { , <variable> } ) {; <stmt>} end

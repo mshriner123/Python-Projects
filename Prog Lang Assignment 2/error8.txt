@@ -1,0 +1,1 @@
+program CDC procedure 123 <compound stmt> <compound stmt>

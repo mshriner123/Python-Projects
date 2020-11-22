@@ -1,0 +1,1 @@
+program D1 begin read ( abc , dw end

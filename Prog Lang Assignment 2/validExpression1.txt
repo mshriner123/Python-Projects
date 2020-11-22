@@ -1,0 +1,1 @@
+program A begin a:=+12 end

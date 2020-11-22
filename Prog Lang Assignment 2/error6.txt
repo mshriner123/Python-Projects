@@ -1,0 +1,1 @@
+program AB begin call A ( ) finish

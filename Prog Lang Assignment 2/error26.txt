@@ -1,0 +1,1 @@
+program D begin if ( 4 then <stmt> {; <stmt>} end
