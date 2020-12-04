@@ -1,8 +1,12 @@
 import re
 
+#Programming Languages Assignment 2, Skidmore College
+#Professor Michael Eckmann
+
 #palindromecheckA.py takes input from the user and determines if it is a palindrome. It repeats that process until
 #the user enters -1. This program contains two functions: is_palindrome(user_input) and get_user_input().
 #Call get_user_input() to start this program.
+
 #Author: Michael Shriner
 #Date: October 21, 2020
 
