@@ -1,8 +1,13 @@
+
+#Programming Languages Assignment 2, Skidmore College
+#Professor Michael Eckmann
+
 #computeMPG.py asks the user to enter a number of miles driven and a number of
 #gallons used until the user enters -1. Once the user enters -1, the miles per gallon is printed
 #to the console such that mpg = total number of miles driven / total number of gallons used.
-#author: Michael Shriner
-#date: October 19, 2020
+
+#Author: Michael Shriner
+#Date: October 19, 2020
 
 #mpg() calculates the miles per gallon if the number of gallons used is greater than 0. Then, it prints
 #the miles per gallon to the console with 4 decimal places.
