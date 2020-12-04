@@ -1,11 +1,14 @@
 import re
 import sys
 
-#Programming Languages Assignment 2
+#Programming Languages Assignment 2, Skidmore College
+#Professor Michael Eckmann
+
 #parser.py is a recursive descent parser for a given grammar. It uses one lookahead.
 #The descriptions of the test files that I provided are in Test File Descriptions.txt.
-#author: Michael Shriner
-#date: October 25, 2020
+
+#Author: Michael Shriner
+#Date: October 25, 2020
 
 def lex():
 
